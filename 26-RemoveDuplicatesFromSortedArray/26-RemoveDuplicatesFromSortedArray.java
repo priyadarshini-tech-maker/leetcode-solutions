@@ -1,0 +1,14 @@
+// Last updated: 1/25/2026, 2:30:09 PM
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        int indexForNextNumber = 1;
+        for(int i=1;i<nums.length;i++) {
+            if(nums[i]>nums[i-1]) {
+                nums[indexForNextNumber] = nums[i];
+                indexForNextNumber++;
+            }
+        }
+        return indexForNextNumber;
+        
+    }
+}
